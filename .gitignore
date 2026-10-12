@@ -1,0 +1,79 @@
+# This is a sample .gitignore file that's useful for EECS 485 projects.
+#
+# Add this file to the root of your git repo.  Name it .gitignore
+#
+# A .gitignore file will tell git which files and directories to ignore and
+# not add to version control.
+
+# EECS 485 All Projects
+submit.tar.gz
+submit.tar.xz
+starter_files.tar.gz
+starter_files.tar.xz
+.env
+
+# EECS 485 Project 1
+chat485_html/
+generated_html/
+
+# EECS 485 Project 2
+*.pem
+*.db
+var/
+
+# EECS 485 Project 3
+node_modules/
+cookies.txt
+session.json
+bundle.js
+*.js.map
+**/e2e/test_cypress_hello.cy.js
+# Don't include the screenshots and videos that Cypress generates in headless mode.
+**/cypress/videos
+**/cypress/screenshots
+
+# EECS 485 Project 4
+tmp
+output
+
+# EECS 485 Project 5
+output*
+total_document_count.txt
+**/inverted_index/crawl/
+
+# Python
+*.pyc
+__pycache__/
+*.egg-info*
+build/
+dist/
+env/
+venv/
+venv3/
+.venv/
+.pytest_cache
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual Machines
+.vagrant/
+
+# Text editors and IDEs
+*~
+*.lock
+*.swp
+.vscode
+.ropeproject/
+.idea
+
+# macOS system files
+*.DS_Store
+
+# Windows system files
+Thumbs.db
+Desktop.ini
+
+# Google Drive and Dropbox
+Icon
+.dropbox*
