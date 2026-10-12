@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=64.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chat485"
+version = "1.0.0"
+dependencies = [
+    "arrow",
+    "bs4",
+    "Flask",
+    "pdbp",
+    "pytest",
+    "pytest-mock",
+    "python-dotenv",
+    "requests",
+    "ruff",
+]
+requires-python = ">=3.12"
+
+[tool.setuptools]
+packages = ["chat485"]
+
+[tool.ruff]
+# Must be explicit and match requires-python: `ruff --config ruff.toml`
+# does not read requires-python.  ./test checks this.
+target-version = "py312"
+
+[tool.ruff.lint]
+# Specify which groups of lint rules to use.
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "D",   # pydocstyle
+    "I",   # isort
+    "UP",  # pyupgrade
+    "N",   # pep8-naming
+    "PT",  # flake8-pytest-style
+    "B",   # flake8-bugbear
+    "SIM", # flake8-simplify
+    "PL",  # pylint subset
+    "RET", # flake8-return
+    "C4",  # flake8-comprehensions
+    "ARG", # flake8-unused-arguments
+]
+# Ignore specific rule violations.  See https://docs.astral.sh/ruff/rules.
+ignore = [
+    # Disable the following two rules because they conflict with other rules.
+    "D203",  # one-blank-line-before-class (conflicts with D211)
+    "D213",  # multi-line-summary-second-line (conflicts with D212)
+
+    # Disable the following rules because they're made redundant by the formatter.
+    "W191",  # tab-indentation
+    "E111",  # indentation-with-invalid-multiple
+    "E114",  # indentation-with-invalid-multiple-comment
+    "E117",  # over-indented
+    "D206",  # indent-with-spaces
+    "D300",  # triple-single-quotes
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "pep257"
+
+[tool.ruff.lint.per-file-ignores]
+# Side-effect imports for Flask route registration are the rule, not the
+# exception, in package __init__.py files.  Ignore F401 (unused-import) there.
+"__init__.py" = ["F401"]
+# HTTP status codes and similar magic numbers in test assertions are
+# idiomatic, not a code smell.  Ignore PLR2004 in test files.
+"test_*.py" = ["PLR2004"]
+"conftest.py" = ["PLR2004"]

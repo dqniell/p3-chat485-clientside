@@ -1,0 +1,61 @@
+{
+  "name": "chat485",
+  "version": "1.0.0",
+  "description": "chat485 front end",
+  "main": "chat485/js/main.jsx",
+  "type": "module",
+  "author": "awdeorio",
+  "license": "MIT",
+  "repository": {},
+  "allowScripts": {
+    "cypress": true,
+    "unrs-resolver": true
+  },
+  "devDependencies": {
+    "@babel/core": ">=7.29.0",
+    "@babel/eslint-parser": ">=7.28.6",
+    "@babel/plugin-transform-runtime": ">=7.29.0",
+    "@babel/preset-env": ">=7.29.0",
+    "@babel/preset-react": ">=7.28.5",
+    "@babel/runtime": ">=7.28.6",
+    "@cypress/grep": "^6.0.0",
+    "@eslint/compat": "^2.0.2",
+    "@eslint/eslintrc": "^3.3.3",
+    "@eslint/js": "^9.39.2",
+    "@types/react": ">=19.2.11",
+    "@types/react-dom": ">=19.2.3",
+    "@typescript-eslint/eslint-plugin": "^8.54.0",
+    "@typescript-eslint/parser": "^8.54.0",
+    "babel-loader": "^10.0.0",
+    "cypress": ">=15.10.0",
+    "cypress-fail-on-console-error": "^5.1.3",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-cypress": "^5.2.1",
+    "eslint-plugin-import-x": "^4.16.1",
+    "eslint-plugin-jsx-a11y": ">=6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "find-test-names": "^1.29.19",
+    "globals": "^17.3.0",
+    "prettier": "^3.8.1",
+    "start-server-and-test": "^2.1.3",
+    "ts-loader": ">=9.5.4",
+    "typescript": ">=5.9.3",
+    "webpack": ">=5.105.0",
+    "webpack-cli": ">=6.0.1"
+  },
+  "dependencies": {
+    "github-markdown-css": "^5.9.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-intersection-observer": "^10.0.3",
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^7.13.0",
+    "rehype-highlight": "^7.0.2",
+    "remark-gfm": "^4.0.1"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}
