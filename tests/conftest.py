@@ -17,9 +17,10 @@ import logging
 import subprocess
 import urllib.parse
 
-import chat485
 import pytest
 import requests
+
+import chat485
 
 # Set up logging
 LOGGER = logging.getLogger("autograder")
